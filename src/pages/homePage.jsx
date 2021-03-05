@@ -1,9 +1,8 @@
 import React from 'react';
-import './homepage.scss';
+import './homePage.scss';
 
 // Components
-
-import FrameContents from '../components/frameContents';
+import FrameContents from '../components/frameContents/frameContents';
 
 const HomePage = () => (
 	<div className="home-page">

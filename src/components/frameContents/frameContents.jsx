@@ -2,17 +2,65 @@ import React from 'react';
 import './frameContents.scss';
 
 // Components
+import MenuItem from '../menuItem/menuItem';
 
-import MenuItem from './menuItem';
+class FrameContents extends React.Component {
+	constructor() {
+		super();
+		this.state = {
+			sections: [
+				{
+					title: 'hats',
+					imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+					id: 1,
+					linkUrl: 'shop/hats',
+				},
+				{
+					title: 'jackets',
+					imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+					id: 2,
+					linkUrl: 'shop/jackets',
+				},
+				{
+					title: 'sneakers',
+					imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+					id: 3,
+					linkUrl: 'shop/sneakers',
+				},
+				{
+					title: 'womens',
+					imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+					size: 'large',
+					id: 4,
+					linkUrl: 'shop/womens',
+					size: 'large',
+				},
+				{
+					title: 'mens',
+					imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+					size: 'large',
+					id: 5,
+					linkUrl: 'shop/mens',
+					size: 'large',
+				},
+			],
+		};
+	}
 
-const frameContents = () => (
-	<div className="frame-contents">
-		<MenuItem title="Hats" subtitle="Shop Now" />
-		<MenuItem title="Jackets" subtitle="Shop Now" />
-		<MenuItem title="Sneakers" subtitle="Shop Now" />
-		<MenuItem title="Womens" subtitle="Shop Now" />
-		<MenuItem title="Mens" subtitle="Shop Now" />
-	</div>
-);
+	render() {
+		return (
+			<div className="frame-contents">
+				{this.state.sections.map(({ title, id, imageUrl, size }) => (
+					<MenuItem
+						title={title}
+						key={id}
+						imageUrl={imageUrl}
+						size={size}
+					/>
+				))}
+			</div>
+		);
+	}
+}
 
-export default frameContents;
+export default FrameContents;
