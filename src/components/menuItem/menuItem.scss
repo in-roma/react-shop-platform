@@ -15,7 +15,8 @@
 			transition: transform 1s ease-in-out;
 		}
 		& .content {
-			opacity: 0.9;
+			opacity: 1;
+			transition: opacity 1s ease-in-out;
 		}
 	}
 
@@ -45,12 +46,13 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		// border: 1px solid black;
 		background-color: white;
-		opacity: 0.97;
+		opacity: 0.95;
 		position: absolute;
 
 		.title {
+			height: auto;
+			margin: 0;
 			font-weight: 700;
 			margin-bottom: 6px;
 			font-size: 18px;
@@ -58,6 +60,8 @@
 		}
 
 		.subtitle {
+			margin: 0;
+			height: auto;
 			font-weight: 400;
 			font-size: 12px;
 		}
