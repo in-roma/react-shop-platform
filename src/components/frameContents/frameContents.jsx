@@ -50,13 +50,8 @@ class FrameContents extends React.Component {
 	render() {
 		return (
 			<div className="frame-contents">
-				{this.state.sections.map(({ title, id, imageUrl, size }) => (
-					<MenuItem
-						title={title}
-						key={id}
-						imageUrl={imageUrl}
-						size={size}
-					/>
+				{this.state.sections.map(({ id, ...otherSectionProps }) => (
+					<MenuItem key={id} {...otherSectionProps} />
 				))}
 			</div>
 		);
