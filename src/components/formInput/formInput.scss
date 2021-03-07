@@ -1,15 +1,9 @@
 $sub-color: grey;
 $main-color: black;
 
-@mixin shrinkLabel {
-	// top: -14px;
-	font-size: 12px;
-	color: $main-color;
-}
-
 .group {
 	position: relative;
-	margin: 45px 0;
+	margin: 16px 0;
 
 	.form-input {
 		background: none;
@@ -29,12 +23,10 @@ $main-color: black;
 		}
 
 		&:focus ~ .form-input-label {
-			@include shrinkLabel();
 		}
-	}
-
-	input[type='password'] {
-		letter-spacing: 0.3em;
+		&:focus input[type='password'] {
+			letter-spacing: 3em;
+		}
 	}
 
 	.form-input-label {
@@ -48,7 +40,6 @@ $main-color: black;
 		transition: 300ms ease all;
 
 		&.shrink {
-			@include shrinkLabel();
 		}
 	}
 }
