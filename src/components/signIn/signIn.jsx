@@ -3,6 +3,7 @@ import './signIn.scss';
 
 // Components
 import FormInput from '../formInput/formInput.jsx';
+import Button from '../button/button.jsx';
 
 class SignIn extends React.Component {
 	constructor(props) {
@@ -33,18 +34,21 @@ class SignIn extends React.Component {
 						type="email"
 						name="email"
 						value={this.state.email}
-						onChange={this.handleChange}
+						handleChange={this.handleChange}
 						label="email"
+						required
 					/>
+
 					<FormInput
 						type="password"
 						name="password"
 						value={this.state.password}
-						onChange={this.handleChange}
+						handleChange={this.handleChange}
 						label="password"
+						required
 					/>
 
-					<input type="submit" value="Submit" />
+					<Button type="submit">Sign-In</Button>
 				</form>
 			</div>
 		);
