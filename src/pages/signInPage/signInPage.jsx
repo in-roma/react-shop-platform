@@ -5,10 +5,10 @@ import './signInPage.scss';
 
 import SignIn from '../../components/signIn/signIn.jsx';
 
-const SignInPage = () => {
+const SignInPage = () => (
 	<div className="sign-in">
 		<SignIn />
-	</div>;
-};
+	</div>
+);
 
 export default SignInPage;
