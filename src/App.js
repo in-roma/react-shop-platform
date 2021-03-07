@@ -6,6 +6,7 @@ import { Switch, Route } from 'react-router-dom';
 import Header from './components/header/header.jsx';
 import HomePage from './pages/homePage/homePage.jsx';
 import ShopPage from './pages/shopPage/shopPage.jsx';
+import SignInPage from './pages/signInPage/signInPage.jsx';
 
 function App() {
 	return (
@@ -14,6 +15,7 @@ function App() {
 			<Switch>
 				<Route exact path="/" component={HomePage} />
 				<Route exact path="/shop" component={ShopPage} />
+				<Route exact path="/signin" component={SignInPage} />
 			</Switch>
 		</React.Fragment>
 	);

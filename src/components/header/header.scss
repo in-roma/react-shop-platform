@@ -29,6 +29,8 @@
 			color: black;
 			font-weight: 600;
 			text-transform: uppercase;
+			border-bottom: 2px white solid;
+			transform: translateY(4px);
 			&:hover {
 				border-bottom: 2px black solid;
 			}
