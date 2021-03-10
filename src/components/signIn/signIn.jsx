@@ -48,13 +48,12 @@ class SignIn extends React.Component {
 						placeholder="Password"
 						// required
 					/>
-
-					<Button type="submit" className="form-button">
-						Sign-In
-					</Button>
-					<Button onClick={signInWithGoogle}>
-						Sign-In with Google
-					</Button>
+					<div className="buttons">
+						<Button type="submit">Sign-In</Button>
+						<Button onClick={signInWithGoogle}>
+							Sign-In with Google
+						</Button>
+					</div>
 				</form>
 			</div>
 		);
