@@ -38,3 +38,11 @@
 		}
 	}
 }
+
+.header-display-name {
+	margin-left: 32px;
+	padding-bottom: 4px;
+	text-transform: capitalize;
+	transform: translateY(4px);
+	border-bottom: 2px white solid;
+}

@@ -10,7 +10,10 @@ const Header = ({ currentUser }) => (
 		<Link to="/" className="logo-container">
 			<Logo className="logo" />
 		</Link>
-		<div className="header-sections">
+		<div className="header-sections ">
+			<span className="header-display-name">{`${
+				currentUser ? 'Hi ' + currentUser.displayName : ''
+			}`}</span>
 			<Link to="/shop" className="header-section">
 				Shop
 			</Link>
