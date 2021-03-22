@@ -8,8 +8,8 @@ import './header.scss';
 import { ReactComponent as Logo } from '../../assets/logo.svg';
 
 // Components
-
 import CartIcon from '../cart-icon/cartIcon';
+import CartDropDown from '../cart-dropdown/cart-dropdown';
 
 const Header = ({ currentUser }) => (
 	<div className="header">
@@ -42,6 +42,7 @@ const Header = ({ currentUser }) => (
 
 			<CartIcon />
 		</div>
+		<CartDropDown />
 	</div>
 );
 
