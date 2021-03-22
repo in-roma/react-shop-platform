@@ -10,10 +10,11 @@
 	background-color: black;
 	color: white;
 	text-transform: uppercase;
-
 	font-weight: bolder;
 	border: none;
 	cursor: pointer;
+	display: flex;
+	justify-content: center;
 
 	&:hover {
 		background-color: white;
@@ -24,7 +25,18 @@
 		background-color: #4285f4;
 		color: white;
 		&:hover {
-			background-color: #4285f4;
+			background-color: white;
+			color: #4285f4;
+			border: 1px solid #4285f4;
+		}
+	}
+	&.inverted {
+		color: black;
+		background-color: white;
+		border: 1px solid rgba(0, 0, 0, 0.098);
+		&:hover {
+			color: white;
+			background-color: black;
 			border: none;
 		}
 	}
