@@ -10,6 +10,8 @@ import Header from './components/header/header.jsx';
 import HomePage from './pages/homePage/homePage.jsx';
 import ShopPage from './pages/shopPage/shopPage.jsx';
 import SignInPage from './pages/signInPage/signInPage.jsx';
+import CheckOutPage from './pages/checkOutPage/checkOutPage';
+
 // Redux
 import { setCurrentUser } from './redux/user/user.action';
 // Reselect
@@ -58,6 +60,7 @@ class App extends React.Component {
 							)
 						}
 					/>
+					<Route exact path="/checkout" component={CheckOutPage} />
 				</Switch>
 			</React.Fragment>
 		);
