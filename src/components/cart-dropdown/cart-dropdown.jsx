@@ -9,7 +9,7 @@ import './cart-dropdown.scss';
 import Button from '../button/button';
 import CartItem from '../cart-item/cartItem';
 
-const CartDropDown = ({ cartItems }) => (
+const CartDropDown = ({ cartItems, history }) => (
 	<div className="cart-dropdown">
 		<div className="cart-items">
 			{cartItems.length ? (
@@ -20,7 +20,9 @@ const CartDropDown = ({ cartItems }) => (
 				<span className="empty-message">Your Cart is empty</span>
 			)}
 		</div>
-		<Button>GO TO CHECKOUT</Button>
+		<Button onClick={() => history.push('/checkout')}>
+			GO TO CHECKOUT
+		</Button>
 	</div>
 );
 
