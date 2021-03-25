@@ -7,15 +7,13 @@ import './frameContents.scss';
 // Components
 import MenuItem from '../menuItem/menuItem';
 
-const FrameContents = ({ sections }) => {
-	return (
-		<div className="frame-contents">
-			{sections.map(({ id, ...otherSectionProps }) => (
-				<MenuItem key={id} {...otherSectionProps} />
-			))}
-		</div>
-	);
-};
+const FrameContents = ({ sections }) => (
+	<div className="frame-contents">
+		{sections.map(({ id, ...otherSectionProps }) => (
+			<MenuItem key={id} {...otherSectionProps} />
+		))}
+	</div>
+);
 
 const mapStateToProps = createStructuredSelector({
 	sections: selectDirectorySections,
