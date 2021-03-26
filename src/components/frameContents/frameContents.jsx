@@ -1,11 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+
+// Redux
 import { selectDirectorySections } from '../../redux/directory/directory.selector';
-import './frameContents.scss';
 
 // Components
 import MenuItem from '../menuItem/menuItem';
+
+// Stylesheet
+import './frameContents.scss';
 
 const FrameContents = ({ directory }) => {
 	return (

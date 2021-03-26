@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+// Redux
 import {
 	clearItemFromCart,
 	addItem,
 	removeItem,
 } from '../../redux/cart/cart.action';
 
+// StyleSheet
 import './checkOutItem.scss';
 
 const CheckOutItem = ({ cartItem, clearItem, addItem, removeItem }) => {

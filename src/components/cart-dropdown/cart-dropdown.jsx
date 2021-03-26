@@ -2,13 +2,17 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+
+// Redux
 import { selectCartItems } from '../../redux/cart/cart.selectors';
 import { toggleCartHidden } from '../../redux/cart/cart.action';
-import './cart-dropdown.scss';
 
 // Components
 import Button from '../button/button';
 import CartItem from '../cart-item/cartItem';
+
+// Stylesheet
+import './cart-dropdown.scss';
 
 const CartDropDown = ({ cartItems, history, dispatch }) => (
 	<div className="cart-dropdown">

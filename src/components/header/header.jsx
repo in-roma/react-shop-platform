@@ -2,17 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-
 import { auth } from '../../firebase/firebase.utils';
 
-import './header.scss';
-import { ReactComponent as Logo } from '../../assets/logo.svg';
+// Redux
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 // Components
+import { ReactComponent as Logo } from '../../assets/logo.svg';
 import CartIcon from '../cart-icon/cartIcon';
 import CartDropDown from '../cart-dropdown/cart-dropdown';
+
+// Stylesheet
+import './header.scss';
 
 const Header = ({ currentUser, hidden }) => (
 	<div className="header">

@@ -1,5 +1,4 @@
 import React from 'react';
-import './signUp.scss';
 import {
 	auth,
 	createUserProfileDocument,
@@ -8,6 +7,9 @@ import {
 // Components
 import FormInput from '../formInput/formInput';
 import Button from '../button/button';
+
+// Stylesheet
+import './signUp.scss';
 
 class SignUp extends React.Component {
 	constructor() {
