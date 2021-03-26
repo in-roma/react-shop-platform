@@ -8,7 +8,7 @@ import {
 	removeItem,
 } from '../../redux/cart/cart.action';
 
-// StyleSheet
+// Stylesheet
 import './checkOutItem.scss';
 
 const CheckOutItem = ({ cartItem, clearItem, addItem, removeItem }) => {
