@@ -8,20 +8,14 @@ import CollectionPage from '../collectionPage/collectionPage';
 // Stylesheet
 import './shopPage.scss';
 
-const ShopPage = ({ match }) => {
-	return (
-		<div className="shop-page">
-			<Route
-				exact
-				path={`${match.path}`}
-				component={CollectionOverview}
-			/>
-			<Route
-				path={`${match.path}/:categoryId`}
-				component={CollectionPage}
-			/>
-		</div>
-	);
-};
+const ShopPage = ({ match }) => (
+	<div className="shop-page">
+		<Route exact path={`${match.path}`} component={CollectionOverview} />
+		<Route
+			path={`${match.path}/:collectionId`}
+			component={CollectionPage}
+		/>
+	</div>
+);
 
 export default ShopPage;
