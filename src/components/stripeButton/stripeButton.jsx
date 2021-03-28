@@ -14,7 +14,7 @@ const StripeButton = ({ price }) => {
 	return (
 		<StripeCheckout
 			label="Pay Now"
-			name="Shop React"
+			name="Test stripe Payment Window"
 			billingAddress
 			shippingAddress
 			image=""
