@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -14,8 +13,10 @@ import CheckOutPage from './pages/checkOutPage/checkOutPage';
 
 // Redux
 import { setCurrentUser } from './redux/user/user.action';
-// Reselect
 import { selectCurrentUser } from '../src/redux/user/user.selectors';
+
+// Stylesheet
+import './App.css';
 
 class App extends React.Component {
 	unsubscribeFromAuth = null;
