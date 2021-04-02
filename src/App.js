@@ -10,6 +10,9 @@ import {
 	addCollectionsAndDocuments,
 } from './firebase/firebase.utils';
 
+// Stylesheet
+import { GlobalStyle } from './global.styles';
+
 // Components
 import Header from './components/header/header.jsx';
 import HomePage from './pages/homePage/homePage.jsx';
@@ -21,9 +24,6 @@ import CheckOutPage from './pages/checkOutPage/checkOutPage';
 import { setCurrentUser } from './redux/user/user.action';
 import { selectCurrentUser } from '../src/redux/user/user.selectors';
 import { selectCollectionsForPreview } from './redux/shop/shop.selector';
-
-// Stylesheet
-import './App.css';
 
 class App extends React.Component {
 	unsubscribeFromAuth = null;
@@ -57,6 +57,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<React.Fragment>
+				<GlobalStyle />
 				<Header />
 				<Switch>
 					<Route exact path="/" component={HomePage} />
