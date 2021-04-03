@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { lazy, Suspense } from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -15,15 +15,17 @@ import { GlobalStyle } from './global.styles';
 
 // Components
 import Header from './components/header/header.jsx';
-import HomePage from './pages/homePage/homePage.jsx';
-import ShopPage from './pages/shopPage/shopPage.jsx';
-import SignInPage from './pages/signInPage/signInPage.jsx';
-import CheckOutPage from './pages/checkOutPage/checkOutPage';
 
 // Redux
 import { setCurrentUser } from './redux/user/user.action';
 import { selectCurrentUser } from '../src/redux/user/user.selectors';
 import { selectCollectionsForPreview } from './redux/shop/shop.selector';
+
+// Lazy
+const HomePage = lazy(() => import('./pages/homePage/homePage'));
+const ShopPage = lazy(() => import('./pages/shopPage/shopPage.jsx'));
+const SignInPage = lazy(() => import('./pages/signInPage/signInPage.jsx'));
+const CheckOutPage = lazy(() => import('./pages/checkOutPage/checkOutPage'));
 
 class App extends React.Component {
 	unsubscribeFromAuth = null;
@@ -60,7 +62,9 @@ class App extends React.Component {
 				<GlobalStyle />
 				<Header />
 				<Switch>
-					<Route exact path="/" component={HomePage} />
+					<Suspense>
+						<Route exact path="/" component={HomePage} />
+					</Suspense>
 					<Route path="/shop" component={ShopPage} />
 					<Route
 						exact
