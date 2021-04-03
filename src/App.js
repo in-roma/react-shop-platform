@@ -14,6 +14,7 @@ import {
 import { GlobalStyle } from './global.styles';
 
 // Components
+import Spinner from './components/spinner/spinner';
 import Header from './components/header/header.jsx';
 
 // Redux
@@ -23,8 +24,8 @@ import { selectCollectionsForPreview } from './redux/shop/shop.selector';
 
 // Lazy
 const HomePage = lazy(() => import('./pages/homePage/homePage'));
-const ShopPage = lazy(() => import('./pages/shopPage/shopPage.jsx'));
-const SignInPage = lazy(() => import('./pages/signInPage/signInPage.jsx'));
+const ShopPage = lazy(() => import('./pages/shopPage/shopPage'));
+const SignInPage = lazy(() => import('./pages/signInPage/signInPage'));
 const CheckOutPage = lazy(() => import('./pages/checkOutPage/checkOutPage'));
 
 class App extends React.Component {
@@ -62,22 +63,27 @@ class App extends React.Component {
 				<GlobalStyle />
 				<Header />
 				<Switch>
-					<Suspense>
+					<Suspense fallback={Spinner}>
 						<Route exact path="/" component={HomePage} />
+
+						<Route path="/shop" component={ShopPage} />
+						<Route
+							exact
+							path="/signin"
+							render={() =>
+								this.props.currentUser ? (
+									<Redirect to="/" />
+								) : (
+									<SignInPage />
+								)
+							}
+						/>
+						<Route
+							exact
+							path="/checkout"
+							component={CheckOutPage}
+						/>
 					</Suspense>
-					<Route path="/shop" component={ShopPage} />
-					<Route
-						exact
-						path="/signin"
-						render={() =>
-							this.props.currentUser ? (
-								<Redirect to="/" />
-							) : (
-								<SignInPage />
-							)
-						}
-					/>
-					<Route exact path="/checkout" component={CheckOutPage} />
 				</Switch>
 			</React.Fragment>
 		);
