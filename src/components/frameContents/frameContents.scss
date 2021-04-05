@@ -5,4 +5,20 @@
 	justify-content: space-between;
 	margin: 0;
 	padding: 0;
+	.link-collections {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		min-width: 620px;
+		cursor: pointer;
+		height: 80px;
+		background-color: #fce333;
+		& span {
+			font-size: 28px;
+			font-style: italic;
+			font-weight: 600;
+			color: black;
+		}
+	}
 }

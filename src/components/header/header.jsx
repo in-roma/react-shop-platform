@@ -26,9 +26,9 @@ const Header = ({ currentUser, hidden }) => (
 			<img className="logo" alt="logo" src={Logo} />
 		</Link>
 		<div className="header-sections ">
-			<Link to="/shop" className="header-section">
+			{/* <Link to="/shop" className="header-section">
 				Shop
-			</Link>
+			</Link> */}
 			<span className="header-display-name">{`${
 				currentUser ? 'Hi ' + currentUser.displayName : ''
 			}`}</span>
