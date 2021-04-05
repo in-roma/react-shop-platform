@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="217px" height="53px" viewBox="0 0 217 53" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>logo React / Redux</title>
+    <g id="logo-React-/-Redux" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="logo">
+            <g id="React" transform="translate(101.244223, 37.454326)">
+                <polygon id="background-logo" fill="#FCE333" points="5.77349185 -1.77635684e-15 114.417787 -1.77635684e-15 108.989216 14.9817305 0.417787147 14.9817305"></polygon>
+                <text font-family="HelveticaNeue-Medium, Helvetica Neue" font-size="12" font-weight="800" line-spacing="8.98903829" letter-spacing="0.718562864" fill="#000000">
+                    <tspan x="7.75577693" y="14.5456738">REACT / REDUX</tspan>
+                </text>
+            </g>
+            <text id="FAKESHOP" font-family="Helvetica" font-size="41.9488453" font-weight="normal" line-spacing="29.514009" letter-spacing="-1.16247137" fill="#000000">
+                <tspan x="0" y="40.4494519">FAKESHOP</tspan>
+                <tspan x="256.731285" y="60.984514" letter-spacing="0.110975662"></tspan>
+            </text>
+        </g>
+    </g>
+</svg>

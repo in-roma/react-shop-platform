@@ -23,7 +23,6 @@ const SECTIONS_DATA = [
 		size: 'large',
 		id: 4,
 		linkUrl: 'shop/womens',
-		size: 'large',
 	},
 	{
 		title: 'mens',
@@ -31,7 +30,6 @@ const SECTIONS_DATA = [
 		size: 'large',
 		id: 5,
 		linkUrl: 'shop/mens',
-		size: 'large',
 	},
 ];
 

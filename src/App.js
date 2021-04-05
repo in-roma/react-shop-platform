@@ -4,11 +4,7 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 // Firestore
-import {
-	auth,
-	createUserProfileDocument,
-	addCollectionsAndDocuments,
-} from './firebase/firebase.utils';
+import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 
 // Stylesheet
 import { GlobalStyle } from './global.styles';
@@ -32,7 +28,7 @@ class App extends React.Component {
 	unsubscribeFromAuth = null;
 
 	componentDidMount() {
-		const { setCurrentUser, collectionsArray } = this.props;
+		const { setCurrentUser } = this.props;
 
 		this.unsubscribeFromAuth = auth.onAuthStateChanged(async (userAuth) => {
 			if (userAuth) {
@@ -46,10 +42,6 @@ class App extends React.Component {
 				});
 			}
 			setCurrentUser(userAuth);
-			// addCollectionsAndDocuments(
-			// 	'collections',
-			// 	collectionsArray.map(({ title, items }) => ({ title, items }))
-			// );
 		});
 	}
 

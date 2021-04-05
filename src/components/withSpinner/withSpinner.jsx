@@ -5,7 +5,7 @@ import React from 'react';
 import Spinner from '../spinner/spinner';
 
 const WithSpinner = (WrappedComponents) => {
-	({ isLoading, ...otherProps }) => {
+	return ({ isLoading, ...otherProps }) => {
 		return isLoading ? <Spinner /> : <WrappedComponents {...otherProps} />;
 	};
 };
