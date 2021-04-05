@@ -9,6 +9,8 @@ import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 // Components
+import { ReactComponent as AccountIcon } from '../../assets/account-icon.svg';
+
 // import { ReactComponent as Logo } from '../../assets/logo.svg';
 import Logo from '../../assets/logo.png';
 import CartIcon from '../cart-icon/cartIcon';
@@ -39,7 +41,7 @@ const Header = ({ currentUser, hidden }) => (
 				</div>
 			) : (
 				<Link to="/signin" className="header-section">
-					Sign-In
+					<AccountIcon className="account-icon" />
 				</Link>
 			)}
 

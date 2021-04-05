@@ -26,13 +26,13 @@
 	}
 
 	.header-sections {
-		width: auto;
-		height: 32px;
 		display: flex;
 		align-items: flex-end;
 		justify-content: flex-end;
 
 		.header-section {
+			width: 64px;
+			height: auto;
 			margin-left: 32px;
 			padding-bottom: 4px;
 			text-decoration: none;
@@ -44,6 +44,12 @@
 			cursor: pointer;
 			&:hover {
 				border-bottom: 2px black solid;
+			}
+			.account-icon {
+				width: 38px;
+				height: auto;
+				position: absolute;
+				bottom: 4px;
 			}
 		}
 	}
