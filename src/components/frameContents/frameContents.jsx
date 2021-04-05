@@ -15,11 +15,16 @@ import './frameContents.scss';
 const FrameContents = ({ directory }) => {
 	return (
 		<div className="frame-contents">
-			{directory.map(({ id, ...otherSectionProps }) => (
-				<MenuItem key={id} {...otherSectionProps} />
-			))}
+			{directory
+				.map(({ id, ...otherSectionProps }) => (
+					<MenuItem key={id} {...otherSectionProps} />
+				))
+				.reverse()}
 			<Link to="/shop" className="link-collections">
-				<span>ALL COLLECTIONS</span>
+				<span>
+					&#x02190; &#x02190; &#x02190; SEE COLLECTIONS &#x02192;
+					&#x02192; &#x02192;
+				</span>
 			</Link>
 		</div>
 	);

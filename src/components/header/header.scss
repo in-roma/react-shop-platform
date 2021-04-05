@@ -3,7 +3,9 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 32px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	padding-bottom: 24px;
 
 	@media screen and (max-width: 800px) {
 		height: 60px;
@@ -33,7 +35,7 @@
 		.header-section {
 			width: 64px;
 			height: auto;
-			margin-left: 32px;
+			margin-left: 16px;
 			padding-bottom: 4px;
 			text-decoration: none;
 			color: black;
@@ -42,14 +44,12 @@
 			border-bottom: 2px white solid;
 			transform: translateY(4px);
 			cursor: pointer;
-			// &:hover {
-			// 	border-bottom: 2px black solid;
-			// }
+
 			.account-icon {
-				width: 40px;
+				width: 42px;
 				height: auto;
 				position: absolute;
-				bottom: 4px;
+				bottom: 8px;
 			}
 		}
 	}
