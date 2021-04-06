@@ -10,6 +10,7 @@ import { selectCurrentUser } from '../../redux/user/user.selectors';
 
 // Components
 import { ReactComponent as AccountIcon } from '../../assets/account-icon.svg';
+import { ReactComponent as AccountConnectedIcon } from '../../assets/account-connected-icon.svg';
 
 // import { ReactComponent as Logo } from '../../assets/logo.svg';
 import Logo from '../../assets/logo.png';
@@ -28,14 +29,14 @@ const Header = ({ currentUser, hidden }) => (
 			<div className="header-section">
 				{' '}
 				<span className="header-display-name">{`${
-					currentUser ? 'Hi ' + currentUser.displayName : ''
+					currentUser ? currentUser.displayName : ''
 				}`}</span>
 				{currentUser ? (
 					<div
 						className="header-section-sign-out"
 						onClick={() => auth.signOut()}
 					>
-						Sign-Out
+						<AccountConnectedIcon className="account-icon" />
 					</div>
 				) : (
 					<Link to="/signin">

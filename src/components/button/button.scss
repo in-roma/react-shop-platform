@@ -1,14 +1,15 @@
 .custom-button {
 	min-width: 165px;
 	max-width: 250px;
+	clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
 	width: auto;
 	height: 50px;
 	letter-spacing: 0.5px;
 	line-height: 50px;
 	padding: 0 35px 0 35px;
 	font-size: 13px;
-	background-color: black;
-	color: white;
+	background-color: #fce333;
+	color: black;
 	text-transform: uppercase;
 	font-weight: bolder;
 	border: none;
@@ -17,25 +18,24 @@
 	justify-content: center;
 
 	&:hover {
-		background-color: white;
-		color: black;
-		border: 1px solid black;
+		background-color: black;
+		color: #fce333;
 	}
 	&.google-sign-in {
-		background-color: #4285f4;
+		background-color: #fce333;
 		color: white;
 		&:hover {
 			background-color: white;
-			color: #4285f4;
-			border: 1px solid #4285f4;
+			color: #fce333;
+			border: 1px solid #fce333;
 		}
 	}
 	&.inverted {
 		color: black;
-		background-color: white;
+		background-color: #fce333;
 		border: 1px solid rgba(0, 0, 0, 0.098);
 		&:hover {
-			color: white;
+			color: #fce333;
 			background-color: black;
 			border: none;
 		}
