@@ -10,7 +10,7 @@
 		justify-content: center;
 		align-items: center;
 		width: 100%;
-		min-width: 320px;
+		min-width: 300px;
 		cursor: pointer;
 		height: 80px;
 		// clip-path: polygon(2.5% 0%, 100% 0%, 97.5% 100%, 0% 100%);
@@ -27,6 +27,12 @@
 			font-style: italic;
 			font-weight: 700;
 			color: #fce333;
+			@media screen and (max-width: 600px) {
+				font-size: 24px;
+			}
+			@media screen and (max-width: 500px) {
+				font-size: 16px;
+			}
 		}
 	}
 }

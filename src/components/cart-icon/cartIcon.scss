@@ -1,18 +1,26 @@
 .cart-icon {
-	width: 46px;
 	height: auto;
 	position: relative;
 	display: flex;
 	align-items: flex-end;
 	justify-content: center;
 	cursor: pointer;
-	margin-left: 8px;
+	margin-left: 24px;
 
 	.shopping-icon {
 		width: 38px;
 		height: auto;
 		position: absolute;
 		bottom: 4px;
+		@media screen and (max-width: 800px) {
+			width: 36px;
+		}
+		@media screen and (max-width: 600px) {
+			width: 34px;
+		}
+		@media screen and (max-width: 400px) {
+			width: 30px;
+		}
 	}
 	.item-count {
 		position: absolute;

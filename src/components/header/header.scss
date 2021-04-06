@@ -3,14 +3,12 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	margin-top: 16px;
-	margin-bottom: 16px;
-	padding-bottom: 24px;
+	align-items: center;
+	margin: 0;
+	padding: 0;
 
 	@media screen and (max-width: 800px) {
-		height: 60px;
-		padding: 10px;
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 	}
 
 	.logo-container {
@@ -22,20 +20,24 @@
 			width: auto;
 			height: 42px;
 			@media screen and (max-width: 800px) {
-				height: 22px;
+				height: 36px;
+			}
+			@media screen and (max-width: 600px) {
+				height: 32px;
+			}
+			@media screen and (max-width: 400px) {
+				height: 28px;
 			}
 		}
 	}
 
 	.header-sections {
 		display: flex;
-		align-items: flex-end;
-		justify-content: flex-end;
+		align-items: center;
+		justify-content: center;
 
 		.header-section {
-			width: 64px;
-			height: auto;
-			margin-left: 16px;
+			margin-right: 16px;
 			padding-bottom: 4px;
 			text-decoration: none;
 			color: black;
@@ -44,12 +46,26 @@
 			border-bottom: 2px white solid;
 			transform: translateY(4px);
 			cursor: pointer;
-
+			@media screen and (max-width: 800px) {
+			}
+			@media screen and (max-width: 600px) {
+			}
+			@media screen and (max-width: 400px) {
+			}
 			.account-icon {
 				width: 42px;
 				height: auto;
 				position: absolute;
 				bottom: 8px;
+				@media screen and (max-width: 800px) {
+					width: 40px;
+				}
+				@media screen and (max-width: 600px) {
+					width: 36px;
+				}
+				@media screen and (max-width: 400px) {
+					width: 34px;
+				}
 			}
 		}
 	}
