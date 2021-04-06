@@ -25,14 +25,16 @@ const CartDropDown = ({ cartItems, history, dispatch }) => (
 				<span className="empty-message">Your Cart is empty</span>
 			)}
 		</div>
-		<Button
-			onClick={() => {
-				history.push('/checkout');
-				dispatch(toggleCartHidden());
-			}}
-		>
-			GO TO CHECKOUT
-		</Button>
+		<div className="cart-footer">
+			<Button
+				onClick={() => {
+					history.push('/checkout');
+					dispatch(toggleCartHidden());
+				}}
+			>
+				GO TO CHECKOUT
+			</Button>
+		</div>
 	</div>
 );
 

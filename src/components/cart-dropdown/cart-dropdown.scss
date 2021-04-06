@@ -1,16 +1,12 @@
 .cart-dropdown {
 	position: absolute;
 	width: 380px;
-	height: 380px;
 	display: flex;
 	flex-direction: column;
-
-	// border: 1px solid rgba(0, 0, 0, 0.098);
-	background-color: black;
+	background-color: rgb(255, 255, 255);
 	top: 88px;
 	right: 40px;
 	z-index: 5;
-	opacity: 0.8;
 
 	.empty-message {
 		font-size: 16px;
@@ -18,13 +14,30 @@
 	}
 
 	.cart-items {
-		height: 340px;
+		max-height: 420px;
 		display: flex;
 		flex-direction: column;
 		overflow: scroll;
+		overflow-x: hidden;
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		box-shadow: 0 7.5px 15.2px rgba(0, 0, 0, 0.035),
+			0 60px 121px rgba(0, 0, 0, 0.07);
+		border-top: 4px #fce333 solid;
+	}
+
+	.cart-footer {
+		width: 380px;
+		height: 80px;
+		border-top: 1px #f7f7f7 solid;
+		background-color: white;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		z-index: 6;
 	}
 
 	button {
-		margin-top: auto;
 	}
 }
