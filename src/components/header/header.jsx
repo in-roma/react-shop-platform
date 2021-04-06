@@ -22,34 +22,28 @@ import './header.scss';
 const Header = ({ currentUser, hidden }) => (
 	<div className="header">
 		<Link to="/" className="logo-container">
-			{/* <Logo className="logo" /> */}
 			<img className="logo" alt="logo" src={Logo} />
 		</Link>
 		<div className="header-sections ">
-			{/* <Link to="/shop" className="header-section">
-				Shop
-			</Link> */}
-			<span className="header-display-name">{`${
-				currentUser ? 'Hi ' + currentUser.displayName : ''
-			}`}</span>
-			{currentUser ? (
-				<div
-					className="header-section-sign-out"
-					onClick={() => auth.signOut()}
-				>
-					Sign-Out
-				</div>
-			) : (
-				<Link to="/signin" className="header-section">
-					<AccountIcon className="account-icon" />
-				</Link>
-			)}
-
-			{/* <Link to="/contact" className="header-section">
-				Contact
-			</Link> */}
-
-			<CartIcon />
+			<div className="header-section">
+				{' '}
+				<span className="header-display-name">{`${
+					currentUser ? 'Hi ' + currentUser.displayName : ''
+				}`}</span>
+				{currentUser ? (
+					<div
+						className="header-section-sign-out"
+						onClick={() => auth.signOut()}
+					>
+						Sign-Out
+					</div>
+				) : (
+					<Link to="/signin">
+						<AccountIcon className="account-icon" />
+					</Link>
+				)}
+				<CartIcon />
+			</div>
 		</div>
 		{hidden ? null : <CartDropDown />}
 	</div>
