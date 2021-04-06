@@ -1,5 +1,5 @@
 .cart-dropdown {
-	position: absolute;
+	position: fixed;
 	width: 380px;
 	display: flex;
 	flex-direction: column;
@@ -7,7 +7,18 @@
 	top: 88px;
 	right: 40px;
 	z-index: 5;
+	@media screen and (max-width: 800px) {
+		top: 66px;
+		right: 10px;
+	}
+	@media screen and (max-width: 600px) {
+		top: 60px;
+	}
 
+	@media screen and (max-width: 400px) {
+		top: 54px;
+		width: 302px;
+	}
 	.empty-message {
 		font-size: 16px;
 		margin: 50px auto;
@@ -36,6 +47,10 @@
 		justify-content: center;
 		align-items: center;
 		z-index: 6;
+
+		@media screen and (max-width: 400px) {
+			width: 302px;
+		}
 	}
 
 	button {
