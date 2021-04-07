@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 // Redux
 import { selectCollection } from '../../redux/shop/shop.selector';
@@ -14,12 +15,20 @@ const CollectionPage = ({ collection }) => {
 	const { title, items } = collection;
 	return (
 		<div className="collection-page">
-			<h2 className="title">{title}</h2>
+			<div className="collection-title">
+				<div className="title">{title}</div>
+			</div>
 			<div className="items">
 				{items.map((item) => (
 					<CollectionItem key={item.id} item={item} />
 				))}
 			</div>
+			<Link to="/shop" className="link-backto-collections">
+				<span>
+					&#x02190; &#x02190; &#x02190; TO ALL COLLECTIONS &#x02190;
+					&#x02190; &#x02190;
+				</span>
+			</Link>
 		</div>
 	);
 };
