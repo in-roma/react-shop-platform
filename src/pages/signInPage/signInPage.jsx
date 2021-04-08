@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 // Components
 import SignIn from '../../components/signIn/signIn.jsx';
@@ -9,8 +10,17 @@ import './signInPage.scss';
 
 const SignInPage = () => (
 	<div className="sign-in-and-sign-up">
+		<div className="checkout-page-banner">
+			<span className="checkout-title">SIGN-IN / SIGN-UP</span>
+		</div>
 		<SignIn />
 		<SignUp />
+		<Link to="/shop" className="link-back-to-collections">
+			<span>
+				&#x02190; &#x02190; &#x02190; BACK TO COLLECTIONS &#x02192;
+				&#x02192; &#x02192;
+			</span>
+		</Link>
 	</div>
 );
 

@@ -1,8 +1,88 @@
 .sign-in-and-sign-up {
-	width: 880px;
+	width: 100%;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-
+	flex-flow: wrap;
+	justify-content: space-around;
 	margin: 30px auto;
+}
+
+.checkout-page-banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 60px;
+	background-color: #fce333;
+	border: 4px #fce333 solid;
+	@media screen and (max-width: 800px) {
+		height: 48px;
+	}
+	@media screen and (max-width: 600px) {
+		height: 42px;
+	}
+	@media screen and (max-width: 500px) {
+		height: 38px;
+	}
+	@media screen and (max-width: 400px) {
+		height: 32px;
+	}
+}
+
+.checkout-title {
+	font-size: 28px;
+	font-style: italic;
+	text-transform: uppercase;
+	font-weight: 700;
+	color: black;
+	@media screen and (max-width: 900px) {
+		font-size: 24px;
+	}
+	@media screen and (max-width: 800px) {
+		font-size: 24px;
+	}
+	@media screen and (max-width: 600px) {
+		font-size: 20px;
+	}
+	@media screen and (max-width: 500px) {
+		font-size: 18px;
+	}
+	@media screen and (max-width: 400px) {
+		font-size: 16px;
+	}
+}
+
+.link-back-to-collections {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	min-width: 300px;
+	cursor: pointer;
+	height: 54px;
+	margin: 32px 0;
+	// clip-path: polygon(2.5% 0%, 100% 0%, 97.5% 100%, 0% 100%);
+	background-color: #000000;
+
+	&:hover {
+		background-color: white;
+		&:hover span {
+			color: #fce333;
+		}
+	}
+	& span {
+		font-size: 22px;
+		font-style: italic;
+		font-weight: 700;
+		color: #fce333;
+		@media screen and (max-width: 600px) {
+			font-size: 18px;
+		}
+		@media screen and (max-width: 500px) {
+			font-size: 14px;
+		}
+		@media screen and (max-width: 400px) {
+			font-size: 12px;
+		}
+	}
 }
