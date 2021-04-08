@@ -8,7 +8,26 @@
 	grid-template-columns: 260px repeat(4, 1fr);
 	justify-items: center;
 	align-items: center;
-	column-gap: 28px;
+	@media screen and (max-width: 800px) {
+		grid-template-columns: 240px repeat(4, 1fr);
+		font-size: 16px;
+	}
+	@media screen and (max-width: 600px) {
+		grid-template-columns: 180px repeat(4, 1fr);
+		font-size: 14px;
+		height: 160px;
+	}
+	@media screen and (max-width: 500px) {
+		grid-template-columns: 140px repeat(4, 1fr);
+		font-size: 12px;
+		height: 120px;
+		margin: 4px 0;
+	}
+	@media screen and (max-width: 400px) {
+		grid-template-columns: 80px repeat(4, 1fr);
+		font-size: 10px;
+		height: 80px;
+	}
 
 	.image-container {
 		width: 100%;
@@ -16,7 +35,15 @@
 		padding-right: 15px;
 		overflow: hidden;
 		grid-column: 1/2;
-
+		@media screen and (max-width: 600px) {
+			height: 160px;
+		}
+		@media screen and (max-width: 500px) {
+			height: 120px;
+		}
+		@media screen and (max-width: 400px) {
+			height: 80px;
+		}
 		img {
 			display: block;
 			margin-left: auto;
@@ -26,7 +53,6 @@
 	}
 	.name {
 		grid-column: 2/3;
-		justify-self: start;
 	}
 	.quantity {
 		grid-column: 3/4;
@@ -36,7 +62,7 @@
 	}
 	.remove-button {
 		grid-column: 5/6;
-		padding-left: 12px;
+
 		cursor: pointer;
 	}
 

@@ -3,9 +3,21 @@
 	justify-content: center;
 	align-items: center;
 	width: 100%;
-	height: 80px;
+	height: 60px;
 	background-color: #fce333;
 	border: 4px #fce333 solid;
+	@media screen and (max-width: 800px) {
+		height: 48px;
+	}
+	@media screen and (max-width: 600px) {
+		height: 42px;
+	}
+	@media screen and (max-width: 500px) {
+		height: 38px;
+	}
+	@media screen and (max-width: 400px) {
+		height: 32px;
+	}
 }
 
 .checkout-title {
@@ -14,10 +26,19 @@
 	text-transform: uppercase;
 	font-weight: 700;
 	color: black;
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: 900px) {
 		font-size: 24px;
 	}
+	@media screen and (max-width: 800px) {
+		font-size: 24px;
+	}
+	@media screen and (max-width: 600px) {
+		font-size: 20px;
+	}
 	@media screen and (max-width: 500px) {
+		font-size: 18px;
+	}
+	@media screen and (max-width: 400px) {
 		font-size: 16px;
 	}
 }
@@ -33,28 +54,73 @@
 
 	.checkout-header {
 		width: 100%;
-		padding: 8px 0;
-		display: flex;
-		justify-content: space-between;
-		// border-bottom: 1px solid black;
+		display: grid;
+		grid-template-columns: 260px repeat(4, 1fr);
+		justify-items: center;
+		align-items: center;
+		@media screen and (max-width: 800px) {
+			grid-template-columns: 240px repeat(4, 1fr);
+			font-size: 16px;
+		}
+		@media screen and (max-width: 600px) {
+			grid-template-columns: 180px repeat(4, 1fr);
+			font-size: 12px;
+		}
+		@media screen and (max-width: 500px) {
+			grid-template-columns: 140px repeat(4, 1fr);
+		}
+		@media screen and (max-width: 400px) {
+			grid-template-columns: 80px repeat(4, 1fr);
+			font-size: 10px;
+		}
 		.header-block {
 			text-transform: capitalize;
-			width: 120px;
+
 			span {
 				font-size: 24px;
 				text-transform: uppercase;
 				font-weight: 500;
+				@media screen and (max-width: 1000px) {
+					font-size: 18px;
+				}
+				@media screen and (max-width: 800px) {
+					font-size: 16px;
+				}
+				@media screen and (max-width: 600px) {
+					font-size: 12px;
+				}
+				@media screen and (max-width: 500px) {
+					font-size: 10px;
+				}
+				@media screen and (max-width: 500px) {
+					font-size: 8px;
+				}
+			}
+			&:first-child {
+				justify-self: start;
 			}
 			&:last-child {
-				width: 8%;
+				// justify-self: end;
 			}
 		}
 	}
 
 	.total {
-		margin-top: 30px;
+		margin-top: 16px;
 		margin-left: auto;
 		font-size: 36px;
+		@media screen and (max-width: 800px) {
+			font-size: 34px;
+		}
+		@media screen and (max-width: 600px) {
+			font-size: 30px;
+		}
+		@media screen and (max-width: 500px) {
+			font-size: 28px;
+		}
+		@media screen and (max-width: 400px) {
+			font-size: 20px;
+		}
 	}
 	button {
 		margin-left: auto;
