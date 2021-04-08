@@ -5,26 +5,29 @@
 	font-size: 20px;
 	margin: 16px 0;
 	display: grid;
-	grid-template-columns: 260px repeat(4, 1fr);
+	grid-template-columns: 260px repeat(3, 1fr) 100px;
 	justify-items: center;
 	align-items: center;
+	@media screen and (max-width: 900px) {
+		grid-template-columns: 240px repeat(3, 1fr) 80px;
+	}
 	@media screen and (max-width: 800px) {
-		grid-template-columns: 240px repeat(4, 1fr);
+		grid-template-columns: 240px repeat(3, 1fr) 70px;
 		font-size: 16px;
 	}
 	@media screen and (max-width: 600px) {
-		grid-template-columns: 180px repeat(4, 1fr);
+		grid-template-columns: 180px repeat(3, 1fr) 60px;
 		font-size: 14px;
 		height: 160px;
 	}
 	@media screen and (max-width: 500px) {
-		grid-template-columns: 140px repeat(4, 1fr);
+		grid-template-columns: 140px repeat(3, 1fr) 40px;
 		font-size: 12px;
 		height: 120px;
 		margin: 4px 0;
 	}
 	@media screen and (max-width: 400px) {
-		grid-template-columns: 80px repeat(4, 1fr);
+		grid-template-columns: 80px repeat(3, 1fr) 40px;
 		font-size: 10px;
 		height: 80px;
 	}
