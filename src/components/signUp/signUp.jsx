@@ -2,6 +2,7 @@ import React from 'react';
 import {
 	auth,
 	createUserProfileDocument,
+	signInWithGoogle,
 } from '../../firebase/firebase.utils.js';
 
 // Components
@@ -57,7 +58,7 @@ class SignUp extends React.Component {
 		const { displayName, email, password, confirmPassword } = this.state;
 		return (
 			<div className="sign-up">
-				<h2 className="title">I do not have an account</h2>
+				<h2 className="title">I want to create an account</h2>
 				<span>Sign up with your email and password</span>
 				<form className="sign-up-form" onSubmit={this.handleSubmit}>
 					<FormInput
@@ -92,7 +93,12 @@ class SignUp extends React.Component {
 						placeholder="Confirm Password"
 						required
 					/>
-					<Button type="submit">SIGN UP</Button>
+					<div className="button-sign-up">
+						<Button type="submit">SIGN UP</Button>
+						<Button onClick={signInWithGoogle} isGoogleSignIn>
+							Sign-up with Google
+						</Button>
+					</div>
 				</form>
 			</div>
 		);

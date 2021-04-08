@@ -16,23 +16,26 @@
 	cursor: pointer;
 	display: flex;
 	justify-content: center;
-
+	@media screen and (max-width: 400px) {
+		font-size: 10px;
+	}
 	&:hover {
 		background-color: black;
 		color: #fce333;
 	}
 	&.google-sign-in {
-		background-color: #fce333;
+		clip-path: polygon(8% 0%, 100% 0%, 92% 100%, 0% 100%);
+		background-color: #4285f4;
 		color: white;
+
 		&:hover {
-			background-color: white;
+			background-color: black;
 			color: #fce333;
-			border: 1px solid #fce333;
 		}
 	}
 	&.inverted {
 		color: black;
-		background-color: #fce333;
+		background-color: black;
 		border: 1px solid rgba(0, 0, 0, 0.098);
 		&:hover {
 			color: #fce333;
