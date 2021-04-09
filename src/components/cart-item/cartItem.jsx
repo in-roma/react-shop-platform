@@ -3,7 +3,10 @@ import React from 'react';
 // Stylesheet
 import './cartItem.scss';
 
-const cartItem = ({ item: { imageUrl, price, name, quantity } }) => (
+const cartItem = ({
+	item: { imageUrl, price, name, quantity },
+	removeItem,
+}) => (
 	<div className="cart-item">
 		<div className="cart-image">
 			<img src={imageUrl} alt="item" />
@@ -13,6 +16,9 @@ const cartItem = ({ item: { imageUrl, price, name, quantity } }) => (
 			<span className="price">
 				{quantity} x ${price}
 			</span>
+		</div>
+		<div className="arrow" onClick={removeItem}>
+			&#10095;
 		</div>
 	</div>
 );
