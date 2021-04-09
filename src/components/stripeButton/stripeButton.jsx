@@ -1,6 +1,10 @@
 import React from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 
+// Stylesheet
+
+import './stripeButton.scss';
+
 const StripeButton = ({ price }) => {
 	const priceForStripe = price * 100;
 	const pusblishKey =
@@ -14,16 +18,17 @@ const StripeButton = ({ price }) => {
 	return (
 		<StripeCheckout
 			label="Pay Now"
-			name="Test stripe Payment Window"
+			name="FAKESHOP / React Redux"
 			billingAddress
 			shippingAddress
 			image=""
-			description={`Your total price is ${price}`}
+			description={`Your total price is $${price}.00`}
 			amount={priceForStripe}
-			panelLabel="Pay Now"
 			token={onToken}
 			stripeKey={pusblishKey}
-		/>
+		>
+			<button className="stripe-custom-button">Pay Now</button>
+		</StripeCheckout>
 	);
 };
 

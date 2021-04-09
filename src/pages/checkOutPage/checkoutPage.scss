@@ -44,6 +44,7 @@
 }
 
 .checkout-page {
+	position: relative;
 	width: 100%;
 	min-height: auto;
 	display: flex;
@@ -139,7 +140,7 @@
 	min-width: 300px;
 	cursor: pointer;
 	height: 54px;
-	margin: 32px 0;
+	margin: 120px 0 16px 0;
 	// clip-path: polygon(2.5% 0%, 100% 0%, 97.5% 100%, 0% 100%);
 	background-color: #000000;
 
