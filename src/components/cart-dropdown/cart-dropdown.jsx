@@ -44,9 +44,9 @@ const CartDropDown = ({
 			>
 				GO TO CHECKOUT
 			</Button>
-		</div>
-		<div className="arrow" onClick={toggleCartHidden}>
-			Close
+			<div className="close-button" onClick={toggleCartHidden}>
+				<span>Close</span>
+			</div>
 		</div>
 	</div>
 );
