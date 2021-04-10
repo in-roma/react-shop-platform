@@ -16,9 +16,9 @@ const cartItem = ({
 			<span className="price">
 				{quantity} x ${price}
 			</span>
-		</div>
-		<div className="arrow" onClick={removeItem}>
-			&#10095;
+			<div className="cart-item-cross" onClick={removeItem}>
+				&#10005;
+			</div>
 		</div>
 	</div>
 );
