@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from 'react';
+import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
@@ -19,10 +19,10 @@ import { selectCurrentUser } from '../src/redux/user/user.selectors';
 import { selectCollectionsForPreview } from './redux/shop/shop.selector';
 
 // Lazy
-const HomePage = lazy(() => import('./pages/homePage/homePage'));
-const ShopPage = lazy(() => import('./pages/shopPage/shopPage'));
-const SignInPage = lazy(() => import('./pages/signInPage/signInPage'));
-const CheckOutPage = lazy(() => import('./pages/checkOutPage/checkOutPage'));
+import HomePage from './pages/homePage/homePage';
+import ShopPage from './pages/shopPage/shopPage';
+import SignInPage from './pages/signInPage/signInPage';
+import CheckOutPage from './pages/checkOutPage/checkOutPage';
 
 class App extends React.Component {
 	unsubscribeFromAuth = null;
@@ -55,27 +55,21 @@ class App extends React.Component {
 				<GlobalStyle />
 				<Header />
 				<Switch>
-					<Suspense fallback={Spinner}>
-						<Route exact path="/" component={HomePage} />
+					<Route exact path="/" component={HomePage} />
 
-						<Route path="/shop" component={ShopPage} />
-						<Route
-							exact
-							path="/signin"
-							render={() =>
-								this.props.currentUser ? (
-									<Redirect to="/" />
-								) : (
-									<SignInPage />
-								)
-							}
-						/>
-						<Route
-							exact
-							path="/checkout"
-							component={CheckOutPage}
-						/>
-					</Suspense>
+					<Route path="/shop" component={ShopPage} />
+					<Route
+						exact
+						path="/signin"
+						render={() =>
+							this.props.currentUser ? (
+								<Redirect to="/" />
+							) : (
+								<SignInPage />
+							)
+						}
+					/>
+					<Route exact path="/checkout" component={CheckOutPage} />
 				</Switch>
 			</React.Fragment>
 		);
