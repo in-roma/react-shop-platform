@@ -1,12 +1,12 @@
 import React from 'react';
 import { auth, signInWithGoogle } from '../../firebase/firebase.utils.js';
 
+// Stylesheet
+import './signIn.scss';
+
 // Components
 import FormInput from '../formInput/formInput.jsx';
 import Button from '../button/button.jsx';
-
-// Stylesheet
-import './signIn.scss';
 
 class SignIn extends React.Component {
 	constructor(props) {
@@ -48,7 +48,7 @@ class SignIn extends React.Component {
 						value={this.state.email}
 						handleChange={this.handleChange}
 						placeholder="Email"
-						// required
+						required
 					/>
 
 					<FormInput
@@ -57,7 +57,7 @@ class SignIn extends React.Component {
 						value={this.state.password}
 						handleChange={this.handleChange}
 						placeholder="Password"
-						// required
+						required
 					/>
 					<div className="buttons">
 						<Button type="submit">Sign-In</Button>

@@ -2,14 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
+// Stylesheet
+import './collectionOverview.scss';
+
 // Redux
 import { selectCollectionsForPreview } from '../../redux/shop/shop.selector';
 
 // Components
 import CollectionPreview from '../collectionPreview/collectionPreview';
-
-// Stylesheet
-import './collectionOverview.scss';
 
 const CollectionOverview = ({ collections }) => (
 	<div className="collection-overview">

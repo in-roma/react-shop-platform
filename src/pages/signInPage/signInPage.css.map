@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,oBAAoB,CAAC;EACpB,KAAK,EAAE,KAAK;EACZ,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,GAAG;EACnB,eAAe,EAAE,aAAa;EAE9B,MAAM,EAAE,SAAS;CACjB",
-    "sources": [
-        "signInPage.scss"
-    ],
-    "names": [],
-    "file": "signInPage.css"
-}

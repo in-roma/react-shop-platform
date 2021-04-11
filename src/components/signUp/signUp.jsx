@@ -5,12 +5,12 @@ import {
 	signInWithGoogle,
 } from '../../firebase/firebase.utils.js';
 
+// Stylesheet
+import './signUp.scss';
+
 // Components
 import FormInput from '../formInput/formInput';
 import Button from '../button/button';
-
-// Stylesheet
-import './signUp.scss';
 
 class SignUp extends React.Component {
 	constructor() {

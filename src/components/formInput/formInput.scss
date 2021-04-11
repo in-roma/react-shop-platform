@@ -23,9 +23,6 @@ $main-color: black;
 		&:focus {
 			outline: none;
 		}
-
-		&:focus ~ .form-input-label {
-		}
 		&:focus input[type='password'] {
 			letter-spacing: 3em;
 		}
@@ -42,8 +39,6 @@ $main-color: black;
 		transition: 300ms ease all;
 		@media screen and (max-width: 600px) {
 			font-size: 14px;
-		}
-		&.shrink {
 		}
 	}
 }

@@ -4,6 +4,9 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { auth } from '../../firebase/firebase.utils';
 
+// Stylesheet
+import './header.scss';
+
 // Redux
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 import { selectCurrentUser } from '../../redux/user/user.selectors';
@@ -16,9 +19,6 @@ import { ReactComponent as AccountConnectedIcon } from '../../assets/account-con
 import Logo from '../../assets/logo.png';
 import CartIcon from '../cart-icon/cartIcon';
 import CartDropDown from '../cart-dropdown/cart-dropdown';
-
-// Stylesheet
-import './header.scss';
 
 const Header = ({ currentUser, hidden }) => (
 	<div className="header">

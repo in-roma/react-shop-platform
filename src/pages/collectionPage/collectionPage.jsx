@@ -2,14 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
+// Stylesheet
+import './collectionPage.scss';
+
 // Redux
 import { selectCollection } from '../../redux/shop/shop.selector';
 
 // Components
 import CollectionItem from '../../components/collectionItem/collectionItem';
-
-// Stylesheet
-import './collectionPage.scss';
 
 const CollectionPage = ({ collection }) => {
 	const { title, items } = collection;

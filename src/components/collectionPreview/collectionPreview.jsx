@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Components
-import CollectionItem from '../collectionItem/collectionItem.jsx';
-
 // Stylesheet
 import './collectionPreview.scss';
+
+// Components
+import CollectionItem from '../collectionItem/collectionItem.jsx';
 
 const CollectionPreview = ({ title, items }) => (
 	<div className="collection-preview">

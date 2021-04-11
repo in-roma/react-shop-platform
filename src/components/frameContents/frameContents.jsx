@@ -3,14 +3,14 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { Link } from 'react-router-dom';
 
+// Stylesheet
+import './frameContents.scss';
+
 // Redux
 import { selectDirectorySections } from '../../redux/directory/directory.selector';
 
 // Components
 import MenuItem from '../menuItem/menuItem';
-
-// Stylesheet
-import './frameContents.scss';
 
 const FrameContents = ({ directory }) => {
 	return (

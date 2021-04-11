@@ -1,14 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+// Stylesheet
+import './collectionItem.scss';
+
 // Redux
 import { addItem } from '../../redux/cart/cart.action';
 
 // Components
 import Button from '../button/button';
-
-// Stylesheet
-import './collectionItem.scss';
 
 const CollectionItem = ({ item, addItem }) => (
 	<div className="collection-item">

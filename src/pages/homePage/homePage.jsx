@@ -1,10 +1,10 @@
 import React from 'react';
 
-// Components
-import FrameContents from '../../components/frameContents/frameContents.jsx';
-
 // Stylesheet
 import './homePage.scss';
+
+// Components
+import FrameContents from '../../components/frameContents/frameContents.jsx';
 
 const HomePage = () => (
 	<div className="home-page">
