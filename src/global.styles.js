@@ -19,8 +19,4 @@ a {
     color: black;
 }
 
-svg {
-
-    font-family: 'Helvetica'
-}
   `;

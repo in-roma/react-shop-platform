@@ -7,18 +7,25 @@
 	.preview-title {
 		display: flex;
 		justify-content: center;
+		align-items: center;
 		width: 100%;
 		height: 40px;
-		background-color: #fce333;
-		border: 4px #fce333 solid;
+		background-color: #000000;
 		margin-bottom: 16px;
+
+		&:hover {
+			background-color: white;
+			&:hover span {
+				color: #fce333;
+			}
+		}
 
 		.title {
 			font-size: 28px;
 			font-style: italic;
 			text-transform: uppercase;
 			font-weight: 700;
-			color: black;
+			color: #fce333;
 			@media screen and (max-width: 600px) {
 				font-size: 24px;
 			}
