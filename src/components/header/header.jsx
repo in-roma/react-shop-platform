@@ -27,10 +27,9 @@ const Header = ({ currentUser, hidden }) => (
 		</Link>
 		<div className="header-sections ">
 			<div className="header-section">
-				{' '}
-				<span className="header-display-name">{`${
+				{/* <span className="header-display-name">{`${
 					currentUser ? currentUser.displayName : ''
-				}`}</span>
+				}`}</span> */}
 				{currentUser ? (
 					<div
 						className="header-section-sign-out"
