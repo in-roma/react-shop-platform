@@ -14,13 +14,7 @@ import CartItem from '../cart-item/cartItem';
 // Stylesheet
 import './cart-dropdown.scss';
 
-const CartDropDown = ({
-	cartItems,
-	history,
-	dispatch,
-	removeItem,
-	toggleCartHidden,
-}) => (
+const CartDropDown = ({ cartItems, history, removeItem, toggleCartHidden }) => (
 	<div className="cart-dropdown">
 		<div className="cart-items">
 			{cartItems.length ? (
@@ -38,8 +32,8 @@ const CartDropDown = ({
 		<div className="cart-footer">
 			<Button
 				onClick={() => {
+					toggleCartHidden();
 					history.push('/checkout');
-					dispatch(toggleCartHidden());
 				}}
 			>
 				GO TO CHECKOUT

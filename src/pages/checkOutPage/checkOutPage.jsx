@@ -3,6 +3,9 @@ import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { Link } from 'react-router-dom';
 
+// Stylesheet
+import './checkoutPage.scss';
+
 // Redux
 import {
 	selectCartItems,
@@ -12,9 +15,6 @@ import {
 // Components
 import CheckOutItem from '../../components/checkoutItem/checkOutItem';
 import StripeButton from '../../components/stripeButton/stripeButton';
-
-// Stylesheet
-import './checkoutPage.scss';
 
 const CheckOutPage = ({ cartItems, total }) => (
 	<div className="checkout-page-container">
